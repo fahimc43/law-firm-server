@@ -8,8 +8,10 @@ app.use(express.json());
 
 // Router
 const serviceRoute = require("./routes/service.route");
+const bookingRoute = require("./routes/booking.route");
 
 app.use("/api/v1/service", serviceRoute);
+app.use("/api/v1/booking", bookingRoute);
 
 app.get("/", (req, res) => {
   res.send("Route is working");
